@@ -175,7 +175,7 @@ E    0    0    1    4 2701 0.0018477458
 <div id="what-you-think-the-expected-out-of-sample-error-is" class="section level2">
 <h2>3.What you think the expected out of sample error is</h2>
 <p>I think the obvious error is misclassification.</p>
-<p>When using PCA, I got</p>
+<p>Use PCA version on cross-validation data, we got:</p>
 <pre><code>&gt; confusionMatrix(res,refinedValidation$classe)
 Confusion Matrix and Statistics
 
@@ -240,7 +240,7 @@ Balanced Accuracy      0.9977   0.9886   0.9842   0.9797   0.9941
 </tr>
 </tbody>
 </table>
-<p>without PCA I got this on validation data</p>
+<p>without PCA we got this on cross-validation data</p>
 <pre><code>&gt; confusionMatrix(res,refinedValidation$classe)
 Confusion Matrix and Statistics
 
