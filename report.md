@@ -3,6 +3,8 @@ Practical Machine Learning WriteUp
 
 Author: Zhang Tong <lovewilliam@gmail.com>
 
+REPO: https://github.com/lovewilliam/predmachlearn-002  
+
 1.How you built your model
 ---------------------------
 ##1.1 Preprocess data##
