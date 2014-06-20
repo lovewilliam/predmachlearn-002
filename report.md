@@ -121,7 +121,7 @@ E    0    0    1    4 2701 0.0018477458
 >
 ```
 
-![Importance of each predictor](var_imp.png)
+![Importance of each predictor](http://lovewilliam.github.io/predmachlearn-002/var_imp.png)
 
 I think that is good enough for prediction.
 
