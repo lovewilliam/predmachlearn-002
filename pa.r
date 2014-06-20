@@ -228,6 +228,7 @@ length(res==refinedValidation$classe)
 #predict on test
 res_test<-predict(fit_rf,pca_test)
 
+confusionMatrix(res,refinedValidation$classe)
 
 #######################################
 #write out result
