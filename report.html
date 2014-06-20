@@ -326,7 +326,7 @@ E    0    0    1    4 2701 0.0018477458
 &gt;
 </code></pre>
 
-<p><img src="http://lovewilliam.github.io/predmachlearn-002/var_imp.png" alt="Importance of each predictor"></p>
+<p><img width=500 src="http://lovewilliam.github.io/predmachlearn-002/var_imp.png" /></p>
 
 <p>I think that is good enough for prediction.</p>
 
@@ -342,6 +342,51 @@ E    0    0    1    4 2701 0.0018477458
 <h2>3.What you think the expected out of sample error is  </h2>
 
 <p>I think the obvious error is misclassification.</p>
+
+<p>without PCA I got this on validation data</p>
+
+<pre><code>&gt; confusionMatrix(res,refinedValidation$classe)
+Confusion Matrix and Statistics
+
+          Reference
+Prediction    A    B    C    D    E
+         A 1395    3    0    0    0
+         B    0  945    6    0    0
+         C    0    1  849   15    0
+         D    0    0    0  788    1
+         E    0    0    0    1  900
+
+Overall Statistics
+
+               Accuracy : 0.9945         
+                 95% CI : (0.992, 0.9964)
+    No Information Rate : 0.2845         
+    P-Value [Acc &gt; NIR] : &lt; 2.2e-16      
+
+                  Kappa : 0.993          
+ Mcnemar&#39;s Test P-Value : NA             
+
+Statistics by Class:
+
+                     Class: A Class: B Class: C Class: D Class: E
+Sensitivity            1.0000   0.9958   0.9930   0.9801   0.9989
+Specificity            0.9991   0.9985   0.9960   0.9998   0.9998
+Pos Pred Value         0.9979   0.9937   0.9815   0.9987   0.9989
+Neg Pred Value         1.0000   0.9990   0.9985   0.9961   0.9998
+Prevalence             0.2845   0.1935   0.1743   0.1639   0.1837
+Detection Rate         0.2845   0.1927   0.1731   0.1607   0.1835
+Detection Prevalence   0.2851   0.1939   0.1764   0.1609   0.1837
+Balanced Accuracy      0.9996   0.9971   0.9945   0.9899   0.9993
+&gt; 
+</code></pre>
+
+<p>which means that
+B is possible to be mis-classified as A(more) and C(less)
+C is possible to be mis-classified as B
+D is possible to be mis-classified as C(more) and E
+E is possible to be mis-classified as D</p>
+
+<p>In summary, the predictor tends to give higher grade on validation data.</p>
 
 </body>
 </html>
